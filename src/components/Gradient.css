@@ -1,0 +1,245 @@
+
+body{
+  background: #000;
+}
+nav a.active{
+  font-weight: bold;
+  text-decoration: none;
+  color: greenyellow;
+}
+nav a{
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+nav a::before{
+  content: "";
+  background:linear-gradient(45deg,rgb(97, 97, 186),rgb(52, 52, 172) , rgb(93, 5, 156));
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  top: 30px;
+  transition: all linear 0.3s;
+  opacity: 0;
+}
+nav a:hover::before{
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  opacity: 100%;
+}
+
+nav a{
+  width: max-content;
+  position: relative;
+  transition: all linear 0.3s;
+}
+nav a:hover{
+  color: greenyellow;
+}
+
+
+
+@media (max-width:549px){
+  #sachin{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+  }
+  #About_photo{
+    height: 250px;
+    width: 250px;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.gradient-text {
+    background: linear-gradient(to right, #a855f7, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-text:hover {
+    background: linear-gradient(to right, #d946ef, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+
+  .fancy-gradient-text {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff, #ff99cc, #4a00e0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-animation 5s linear infinite;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .fancy-gradient-text:hover {
+    background: linear-gradient(135deg, #ff99cc, #00d2ff, #3a7bd5, #4a00e0);
+    -webkit-background-clip: text;
+  }
+  
+  
+  @keyframes gradient-animation {
+    0% {
+      background-size: 0% 50%;
+    }
+    50% {
+      background-size: 100% 50%;
+    }
+    100% {
+      background-size: 0% 50%;
+    }
+  }
+  
+
+
+
+
+  /* ------------------------------------ */
+  .fancy-gradient-background {
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    animation: dynamic-photo 15s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes dynamic-photo {
+    0% {
+        background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHdiN2w4a2lic3U0aHN1N2I2dTdlZjJodTd3cnNwdGhlYmxrMGdzMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aRZ4vTsHnyW6A/giphy.webp'); 
+    }
+    25% {
+        background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenY5cDRycG01cW8zZ3Y3azRwNXR4d3Z1bmNncXlzbDk2OWN6emd5ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OK5LK5zLFfdm/giphy.webp'); 
+    }
+    50% {
+        background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnlvcXFsNzFqdjM3dGs3YzF1dTI2bDBidG0wZHc1Ynpna2NpdWpuNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13DZCJrmTryVKU/giphy.webp');
+    }
+    75% {
+        background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTE4b2ZwY2M2cWVtOGJ2bXQzbDBhYnZqaHYxM256dmcyMXBhNTBuMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JfSeK0oKiCIL5756F9/giphy.webp'); 
+    }
+    100% {
+        background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWFtaWMybXk5YndhbmFoa3ZoOGR6bzFzMHplMXZxZTJ3NWs1bGt0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FMsbSSjEe0N6zH7K7x/giphy.webp'); 
+    }
+}
+
+
+/* ------------------about me ---------------------- */
+.my-Bio {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  animation: aboutme 15s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-Bio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('Background/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: bg-fade 15s ease-in-out infinite;
+}
+
+@keyframes bg-fade {
+  0% {
+      opacity: 1;
+      background-image: url('Background/bg1.jpg');
+  }
+  25% {
+      opacity: 0.75;
+      background-image: url('Background/bg2.jpg');
+  }
+  50% {
+      opacity: 0.5;
+      background-image: url('Background/bg3.jpg');
+  }
+  75% {
+      opacity: 0.75;
+      background-image: url('Background/bg4.jpg');
+  }
+  100% {
+      opacity: 1;
+      background-image: url('Background/bg5.jpg');
+  }
+}
+  
+
+/* ----------------------------- */
+
+.fancy-name {
+  font-weight: bold; /* Adjust font weight as needed */
+  background: linear-gradient(90deg, #ffd700, #ffc107, #ffb300, #ffa000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%; /* Adjust for smooth animation */
+  animation: my-name 15s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes my-name {
+  0% {
+    background-size: 0% 50%;
+  }
+  50% {
+    background-size: 100% 50%;
+  }
+  100% {
+    background-size: 0% 50%;
+  }
+}
+
+/* -------------------testimonials------------------ */
+
+.dynamic-testimonial {
+  background: linear-gradient(145deg, #ffd700, #ffc107, #ffb300, #ffa000);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  animation: dynamic-test 15s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes dynamic-test {
+  0% {
+    background: linear-gradient(145deg, #001f3f, #0074D9, #7FDBFF, #FF69B4);
+  }
+  25% {
+    background: linear-gradient(145deg, #003366, #3399FF, #FF85B3, #FF66CC);
+  }
+  50% {
+    background: linear-gradient(145deg, #001f3f, #1E90FF, #FF69B4, #FF1493);
+  }
+  75% {
+    background: linear-gradient(145deg, #000080, #4682B4, #FF69B4, #FF1493);
+  }
+  100% {
+    background: linear-gradient(145deg, #001f3f, #0074D9, #7FDBFF, #FF69B4);
+  }
+}
+
+
